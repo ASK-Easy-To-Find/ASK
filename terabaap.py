@@ -1,1 +1,0 @@
-print("Tumhara Baap hu")
