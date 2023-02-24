@@ -5,6 +5,7 @@
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
+    scroll-behavior: smooth;
 }
 body{
     min-height: 100vh;
@@ -19,6 +20,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10000;
 }
 header .etf{
     color:whitesmoke;
@@ -35,16 +37,111 @@ header ul{
 
 }
 header ul li {
-    list-style:none;
-    margin-left: 10px;
+    list-style: none;
+    margin-left: 20px;
 
 }
 header ul li a{
     text-decoration: none;
-    padding:6px 15px;
+    padding: 6px 15px;
     color: whitesmoke;
+    border-radius:20px;
 }
-header ul li a:hover{
+header ul li a:hover, 
+header ul li a.active
+{
     background: white;
     color:black;
+}
+section{
+    position: relative;
+    width:100%;
+    height:100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+section::before{
+    content: '';
+    position:absolute ;
+    bottom:0 ;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,black,transparent);
+    z-index:1000;
+}
+#background {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+#html
+{
+    mix-blend-mode: lighten;
+    border-radius: 100px;
+    height: 100px;
+    width: 100px;
+    transform: translate(100px);
+    
+}
+#css{
+    mix-blend-mode: solid;
+    border-radius: 200px;
+    height: 100px;
+    width: 100px;
+    transform: translate(100px);
+}
+#cp{
+    mix-blend-mode: solid;
+    border-radius: 200px;
+    height: 100px;
+    width: 100px;
+    z-index: 9;
+}
+#c{
+    mix-blend-mode: solid;
+    border-radius: 200px;
+    height: 100px;
+    width: 100px;
+    z-index: 9;
+    
+}
+#java{
+    
+    mix-blend-mode: solid;
+    border-radius: 200px;
+    height: 100px;
+    width: 100px;
+    z-index: 9;
+    transform: translate(100px);
+    
+}
+#button{
+    
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background:white;
+    color:black;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translate(100px);
+
+}
+.sec{
+    position:relative;
+    padding:100px;
+    background: black;
+
+}
+.sec h1{
+    font-size: 8em;
+    margin-bottom: 10px;
+    color:white;
 }
